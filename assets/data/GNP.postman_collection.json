@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "c1402663-0ddb-47a9-93fb-c16fc44f0006",
+		"name": "GNP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Doctor Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"info@nafsionline.com\", \"password\":\"A@a12345678\", \"push_token\":\"jkjkj\", \"mobile_type_id\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/login",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "heat9070@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A@a12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/token",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patientLoginEnc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "66++43D+oQjY+UZqFdjCLsCaVaKJI4/AzTXz4eL6sXbcUAyjsoSLsumBhG9xk4mdXszvn+dr0Tw5Z3Mu7CQCuTKT1Vko5NcDT1rna6HOkYscUUlRdvpjHXQclDzUTLaixWzGhxM31OdOwvVsHASnEZN3h/26wxJUhXO8MhbvSMaC1i+DD7NbjhELNeTcH8rwNnJdKY5TQd3PvASjNcQ/1sPN87xqKi9zP53Ilbg8MMuRmvatqLSZTuujx3stnXnOhr67C5wIupcEE9DCpkbPCebpcGMiJ3Os8SmCzACIG9KHNjztQUYNy8046L8YApRK4m1MDkz7LCW03wm8xwlHtN8S5VcllDCbvUE8fVhNUnw="
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/patient/patientLoginEnc",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"patient",
+						"patientLoginEnc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patientLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"heat9070@gmail.com\", \"password\":\"A@a12345678\", \"push_token\":\"jkjkj\", \"mobile_type_id\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/patient/patientLogin",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"patient",
+						"patientLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DOCTOR BY NAME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/Ahmed%20Adel%20Elmissiry/doctor_details_name",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"Ahmed%20Adel%20Elmissiry",
+						"doctor_details_name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/4/doctor_details",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"4",
+						"doctor_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DOCTOR Appointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/getDoctorAppointments?doctorId=4",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"getDoctorAppointments"
+					],
+					"query": [
+						{
+							"key": "doctorId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MedCenter Appointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/getMedCenterAppointments?RadId=3",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"getMedCenterAppointments"
+					],
+					"query": [
+						{
+							"key": "RadId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DaysOfWeeks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/setup/getDaysOfWeeks",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"setup",
+						"getDaysOfWeeks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Doctors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"country_id\":null,\"subspecialty_id\":null,\"specialty_id\":null,\"page\":0,\"sort\":\"price\",\"lang\":\"ar\",\"gender\":null,\"region_id\":null,\"name\":\"مسحة كوفيد 19 من البيت\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/searchDoctorsOptimized",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"searchDoctorsOptimized"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/setup/getCountries",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"setup",
+						"getCountries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DoctorDatesTimeSlotsOpt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/GetDoctorDatesTimeSlotsOpt?AddressID=1&date=2022-01-03",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"GetDoctorDatesTimeSlotsOpt"
+					],
+					"query": [
+						{
+							"key": "AddressID",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "2022-01-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Ratings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/doctorRatings/4",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"doctorRatings",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Doctor Ratings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"DoctorId\":4, \"RatingText\": \"very good\", \"Rating1\":5}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/addDoctorRatings",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"addDoctorRatings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Offers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gnppolicy-001-site7.itempurl.com/service_layer/api/doctor/doctorOffers?id=10",
+					"protocol": "http",
+					"host": [
+						"gnppolicy-001-site7",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"service_layer",
+						"api",
+						"doctor",
+						"doctorOffers"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
