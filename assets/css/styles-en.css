@@ -66,7 +66,7 @@
 }
 
 .mar-radio{
-    margin:0 20px 0 10px;
+    margin:0 10px 0 7px!important;
 }
 
 /* Select Style */
@@ -96,10 +96,17 @@ div.content {
 @media screen and (min-width: 768px) {
 
 
-.ng-select-container.ng-has-value{
-    top:20px;
+.select-styled{
+    top: 13px;
     left:20px;
     right:auto;
+    position: relative;
+}
+
+.select-styled:after {
+    right: 25px;
+    left: unset;
+    top:5px;
 }
 
 .group-select label{
@@ -107,8 +114,8 @@ div.content {
     right:auto;
 }
 
-.top-13 .ng-select-container.ng-has-value{
-    top:13px!important;
+.top-13 .select-styled{
+    top:13px;
     right: auto;
     left: unset;
 }

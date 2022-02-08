@@ -1,5 +1,4 @@
 html, body { height: 100%; width:100%;}
-@import "~@ng-select/ng-select/themes/default.theme.css";
 body::-webkit-scrollbar { 
     display: none; 
 }
@@ -92,6 +91,10 @@ body { margin: 0; font-family: 'Cairo', sans-serif; }
     height: 100%;
 }
 
+embed{
+    overflow: hidden;
+}
+
  .validateFire
 {
     color: red;
@@ -101,10 +104,6 @@ body { margin: 0; font-family: 'Cairo', sans-serif; }
     margin-top:-20px;
 }
 
-input.form-control.ng-invalid.ng-touched.ng-dirty, ng-select.ng-dirty.ng-touched.ng-invalid{
-    border: 1px solid red;
-    box-shadow: 2px 2px red !important;
-}
 
 /* Select Stylee */
 .select-hidden {
@@ -131,7 +130,7 @@ input.form-control.ng-invalid.ng-touched.ng-dirty, ng-select.ng-dirty.ng-touched
     top: 5px;
     bottom: 0;
     top: 16px;
-    border-color: transparent transparent #868D9A transparent;
+    border-color: transparent transparent  #C4C4C4 transparent;
     border: 7px solid transparent;
   }
 
@@ -140,17 +139,13 @@ input.form-control.ng-invalid.ng-touched.ng-dirty, ng-select.ng-dirty.ng-touched
     width: 0;
     height: 0;
     border: 7px solid transparent;
-    border-color: transparent transparent #868D9A transparent;
+    border-color: transparent transparent  #C4C4C4 transparent;
     position: absolute;
     top: 16px;
     transition: all 0.2s ease-in;
     transform: rotate(180deg);
   }
-  .select-styled:active::after, .select-styled:focus::after, .select-styled:hover::after,
-  .select-styled.active::after{
-      top:10px!important;
-      transform: rotate(360deg)!important;
-  }
+  .select-styled:active::after, .select-styled:focus::after,
   
   .select-options {
     display: none; 
@@ -190,6 +185,60 @@ input.form-control.ng-invalid.ng-touched.ng-dirty, ng-select.ng-dirty.ng-touched
     
 
 /* End Select Stylee */
+
+
+/* --- Slick Slider ------- */
+
+.slick-slide{
+    margin:10px;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #00000029;
+  }
+  .slick-slide img{
+    width:100%;
+    border: 2px solid #fff;
+  }
+
+  .slick-wrapper{
+    width:100%;
+    padding-top: 20px;
+    text-align:center;
+  }
+
+  .slick1{
+    width:50%;
+    margin:0px auto;
+  }
+
+/* End Slick */
+
+
+/*----- loader Page -----*/
+#loader{
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
 
 
 
@@ -237,6 +286,15 @@ footer {
     border: 1px solid #707070;
      min-height:250px; 
      padding:10px 0px 25px 0px ;
+}
+
+.footer-height{
+    width:100%;
+    height: 400px;
+    position: relative;
+    top: -10px;
+    margin-bottom: -25px;
+    overflow: hidden;
 }
 .pt2 { padding-top:40px ; margin-bottom:20px ;}
 .mb10 { padding-bottom:15px ;}
@@ -363,6 +421,10 @@ footer {
     position: relative;
 }
 
+.card-box-height{
+ height:250px;
+}
+
 
 .avatar{
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -385,6 +447,10 @@ footer {
     font-size:18px!important;
     font-weight: bold!important;
     color:#868D9A!important;
+}
+
+.nav-tabs .nav-link span{
+    color:#868D9A;
 }
 
 .nav-link.active span {
@@ -446,6 +512,7 @@ footer {
     border-radius: 10px;
 }
 
+
 .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active{
     background: #0065FF 0% 0% no-repeat padding-box;
 }
@@ -455,7 +522,6 @@ footer {
 }
 
 .content-main-cats-tabs .header-sub-cats-tabs .nav.nav-tabs .nav-link.active path{fill: white!important;}
-
 
 
 /* ------ Sign up ------ */
@@ -627,7 +693,7 @@ input:-internal-autofill-selected { background-color: white;}
     .navbar-nav  li{padding:0 8px;}
     /* -----Home----- */
     .bg-img{
-        background: url(./assets/imgs/home/bg-home1.png);
+        background: url(./../images/home/bg-home1.png);
         background-position: center !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
@@ -644,12 +710,61 @@ input:-internal-autofill-selected { background-color: white;}
         margin-bottom:10px;
     }
 
+    .content-main-cats-tabs {
+        height: 250px;
+        overflow: hidden;    
+    }
+
+    .header-sub-cats-tabs{
+        border-bottom: 1px solid #868d9a30;
+    }
+
+    .select{
+        height:55px;
+        font-size:13px;
+    }
+
+    .input-icon {
+        transform: translateY(25px);
+        transition: all 0.2s ease-in-out 0s;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .select-options li{
+        font-size:13px;
+    }
+
+    .select-styled.active::after{
+        top:-5px!important;
+        transform: rotate(360deg)!important;
+    }
+
+    .col-width{
+        width:20%;
+    }
+
+    .col-lg-5{
+        width:35%;
+    }
+
+    
+    /*------- Header ------*/
+
+    #header-web{height:80px;}
+
+
+    /* ------ Footer ------ */
+
+    .footer .col-lg-2 {
+        width: 20%;
+    }
 
 
     /* ---- Sign Up ---- */
 
     .bg-login{
-        background: url(./assets/imgs/login-page/bg-login.png);
+        background: url(./../images/login-page/bg-login.png);
         background-position: right !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
@@ -850,7 +965,9 @@ input:-internal-autofill-selected { background-color: white;}
 /* ----- Header------ */
 
 .bg-blue{
-    height:65px;
+    height: 65px;
+    z-index: 1011;
+    opacity: 0.7;
   }
 
   .bg-header{
@@ -866,14 +983,13 @@ input:-internal-autofill-selected { background-color: white;}
 
 /* ----- Footer------ */
 
-    .footer-height{
-        height:100%;
-        width:100%;
-        position: relative;
-    }
 
   .footer  .mar-none{
       text-align: center;
+  }
+
+  .footer-height{
+      overflow: hidden;
   }
 
   
@@ -890,6 +1006,7 @@ input:-internal-autofill-selected { background-color: white;}
 /* ------ Home ------ */
     .bg-section{
         background: #F8F9FA 0% 0% no-repeat padding-box;
+        height:800px;
     }
     .mobile-show .group-h1 {
         display: flex;
@@ -1018,17 +1135,30 @@ input:-internal-autofill-selected { background-color: white;}
         top:60px;
     }
 
-    .ng-select, .select{
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 0.5px solid #949494;
-        border-radius: 10px;
-        height:40px;
-        line-height: 2.2;
-    }
 
     .pad { padding: 15px;}
 
     .search-btn{height:40px;}
+
+    .select-styled.active::after{
+        top:5px!important;
+        transform: rotate(360deg)!important;
+    }
+    .content-main-cats-tabs embed{
+        height: 220px;
+        overflow: hidden;
+        max-height: 280px;
+    }
+
+     #nav-covid1 embed , #nav-consultation2 embed{
+        height: 280px;
+    }
+
+    #nav-offers1 embed{
+        height: 230px;
+    }
+
+
 
 /* ----offers--- */
 
@@ -1166,4 +1296,11 @@ input:-internal-autofill-selected { background-color: white;}
       float: none;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    .footer-logo{
+        width:200px;
+    }
+  }
+
   
